@@ -13,4 +13,9 @@ namespace :deploy do
     run "#{sudo} apt-get -y update"
     run "#{sudo} apt-get -y install python-software-properties"
   end
+  
+  desc "Override the migrations (for sinatra only)"
+  task :migrate, :roles => :db, :only => { :primary => true } do
+    p "Skiping migrations"
+  end
 end

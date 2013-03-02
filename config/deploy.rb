@@ -28,14 +28,6 @@ ssh_options[:forward_agent] = true
 after "deploy", "deploy:cleanup" # keep only the last 5 releases
 
 # To setup new Ubuntu 12.04 server:
-# ssh root@69.164.192.207
-# adduser deployer --ingroup admin
-# echo "deployer ALL=(ALL:ALL) ALL" >> /etc/sudoers
-# exit
-# ssh-copy-id deployer@69.164.192.207
-# 
 # sudo adduser deployer --ingroup admin
 # cat ~/.ssh/id_rsa.pub | ssh deployer@192.168.101.102 'mkdir -p ~/.ssh/ && cat >> ~/.ssh/authorized_keys'
-# cap deploy:install
-# cap deploy:setup
-# cap deploy:cold
+# cap deploy:install && cap deploy:setup && cap deploy:cold

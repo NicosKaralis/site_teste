@@ -2,4 +2,7 @@ source 'https://rubygems.org'
 
 gem 'sinatra'
 gem 'unicorn'
-gem 'capistrano'
+
+group :development do  
+  gem 'capistrano'
+end

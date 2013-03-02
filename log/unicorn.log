@@ -1,0 +1,17 @@
+I, [2013-03-02T12:41:00.781419 #24949]  INFO -- : Refreshing Gem list
+I, [2013-03-02T12:41:01.023438 #24949]  INFO -- : listening on addr=/Users/nicoskaralis/Documents/Projetos/Servidor/teste/tmp/unicorn.portifolio.sock fd=17
+I, [2013-03-02T12:41:01.027355 #24949]  INFO -- : master process ready
+I, [2013-03-02T12:41:01.048152 #24951]  INFO -- : worker=1 ready
+I, [2013-03-02T12:41:01.047089 #24950]  INFO -- : worker=0 ready
+I, [2013-03-02T12:41:20.919389 #24949]  INFO -- : reaped #<Process::Status: pid 24951 exit 0> worker=1
+I, [2013-03-02T12:41:20.919560 #24949]  INFO -- : reaped #<Process::Status: pid 24950 exit 0> worker=0
+I, [2013-03-02T12:41:20.919765 #24949]  INFO -- : master complete
+I, [2013-03-02T12:41:31.277452 #24972]  INFO -- : Refreshing Gem list
+I, [2013-03-02T12:41:31.519138 #24972]  INFO -- : unlinking existing socket=/Users/nicoskaralis/Documents/Projetos/Servidor/teste/tmp/unicorn.portifolio.sock
+I, [2013-03-02T12:41:31.519512 #24972]  INFO -- : listening on addr=/Users/nicoskaralis/Documents/Projetos/Servidor/teste/tmp/unicorn.portifolio.sock fd=17
+I, [2013-03-02T12:41:31.521675 #24972]  INFO -- : master process ready
+I, [2013-03-02T12:41:31.537163 #24974]  INFO -- : worker=1 ready
+I, [2013-03-02T12:41:31.537748 #24973]  INFO -- : worker=0 ready
+I, [2013-03-02T12:42:09.229130 #24972]  INFO -- : reaped #<Process::Status: pid 24974 exit 0> worker=1
+I, [2013-03-02T12:42:09.229327 #24972]  INFO -- : reaped #<Process::Status: pid 24973 exit 0> worker=0
+I, [2013-03-02T12:42:09.229984 #24972]  INFO -- : master complete

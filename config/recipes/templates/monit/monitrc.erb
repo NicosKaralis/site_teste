@@ -1,0 +1,31 @@
+set daemon 30
+
+set logfile /var/log/monit.log
+set idfile /var/lib/monit/id
+set statefile /var/lib/monit/state
+
+set eventqueue
+    basedir /var/lib/monit/events
+    slots 100
+    
+<% if email_alerts_enabled %>
+set alert <%= alert_email %>
+set mailserver <%= alert_smtp_server %> port <%= alert_port %>
+    username "<%= alert_username %>" password "<%= alert_password %>"
+    using tlsv1
+    with timeout 30 seconds
+<% end %>
+
+<% if httpd_enabled %>
+set httpd port <%= httpd_port %>
+    # SSL ENABLE
+    # PEMFILE /etc/ssl/CA/private/InetAdministration-key-cert.pem
+    allow <%= %Q{#{httpd_username}:"#{httpd_password}"} %>
+<% end %>
+
+check system <%= system_name %>
+  if loadavg(5min) > 2 for 2 cycles then alert
+  if memory > 75% for 2 cycles then alert
+  if cpu(user) > 75% for 2 cycles then alert
+
+include /etc/monit/conf.d/*
